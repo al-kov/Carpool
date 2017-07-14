@@ -1,4 +1,4 @@
-#DON'T FORGET
+# DON'T FORGET
 This mobile application uses personal information and daily schedules to generate local carpools. The daily schedule is available to view and update as needed, and carpool information is also easily accessed and updatable.
 
 ## Technologies
