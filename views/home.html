@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="homeGreet">
+    <h1 class="hero">{{greeting}}</h1>
+  </div>
+  <h2>Today's next event:</h2>
+  <div class="row homeSection">
+    <div class="homeContainer col-md-4">
+      <div class="homeHeader">
+        <h2 class="homeHeading">{{ currentTrip.name }} </h2>
+      </div>
+      <div class="homeBody">
+        <h4><strong>Date:</strong> {{ currentTrip.date | date: 'EEE MMM d, y'}}</h4>
+        <h4><strong>Time:</strong> {{ currentTrip.time }}</h4>
+        <h4><strong>Address:</strong> {{ currentTrip.street }}</h4>
+        <h4><strong>City:</strong> {{ currentTrip.city }}</h4>
+        <h4><strong>State:</strong> {{ currentTrip.state }}</h4>
+        <h4><strong>Zip:</strong> {{ currentTrip.zip }}</h4>
+        <h4><strong>Driving TO:</strong> {{ currentTrip.dropoff }}</h4>
+        <h4><strong>Picking up FROM:</strong> {{ currentTrip.pickup }}</h4>
+      </div>
+    </div>
+  </div>
+  <h2>And coming up:</h2>
+  <div class="row homeSection">
+    <div class="homeContainer col-md-4" ng-repeat="trip in nextDateTrips">
+      <div class="homeHeader">
+        <h1 class="homeHeading">{{ trip.name }} </h1>
+      </div>
+      <div class="homeBody">
+        <h4><strong>Date:</strong> {{ trip.date | date: 'EEE MMM d, y'}}</h4>
+        <h4><strong>Time:</strong> {{ trip.time }}</hh4>
+          <h4><strong>Address:</strong> {{ trip.street }}</h4>
+          <h4><strong>City:</strong> {{ trip.city }}</h4>
+          <h4><strong>State:</strong> {{ trip.state }}</h4>
+          <h4><strong>Zip:</strong> {{ trip.zip }}</h4>
+          <h4><strong>Driving TO:</strong> {{ trip.dropoff }}</h4>
+          <h4><strong>Picking up FROM:</strong> {{ trip.pickup }}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

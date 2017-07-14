@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="form-group">
+    <div class="usersSectionHeading">
+      <h2>Carpoolers</h2>
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Cell</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users" ui-sref="showUser({id: {{user.id}} })"> <!--direct to user id view-->
+          <td>{{ user.firstName }} {{user.lastName}}</td>
+          <td>{{ user.cell }}</td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn btn-primary" ui-sref="newUser">New User</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

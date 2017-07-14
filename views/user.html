@@ -1,0 +1,21 @@
+<div class="container">
+   <div class="row userSection">
+    <div class="userContainer col-md-12">
+      <div class="userHeader">
+        <h2 class="userHeading">{{ user.firstName }} {{ user.lastName }}</h2>
+        <h3 class="userSubHeading">Child: {{ user.childName }}</h3>
+      </div>
+      <div class="userBody">
+        <h4><strong>Email:</strong> {{ user.email }}</h4>
+        <h4><strong>Cell:</strong> {{ user.cell }}</h4>
+        <h4><strong>Street:</strong> {{ user.street }}</h4>
+        <h4><strong>City:</strong> {{ user.city }}</h4>
+        <h4><strong>State:</strong> {{ user.state }}</h4>
+        <h4><strong>Zip:</strong> {{ user.zip }}</h4>
+            <button class="btn btn-info" ui-sref="editUser({id: {{user.id }}})">Update</button> <!--directs to user list-->    
+        <button class="btn btn-danger" ng-click="deleteUser(user)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+

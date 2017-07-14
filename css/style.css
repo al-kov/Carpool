@@ -1,0 +1,193 @@
+* {
+padding: 2px;
+margin: 2px;
+box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+   font-family: 'Shadows Into Light Two', cursive; 
+   color:white;
+   background-color:#3F3A3A;
+
+}
+.hero {
+  text-align: center;
+} 
+
+.myNav {
+  height: 50px;
+  background-color: black;
+  padding-top: 10px;
+  }
+
+.myNavItems a {
+  display: inline;
+  color: white;
+  padding: 0 5px;
+  font-size: 20px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.myNavItems a:hover {
+  text-decoration: none;
+  opacity: .6;
+}
+
+.myNavItems li {
+  display: inline;
+}
+  
+.homeGreet {
+   background-image: url("../Images/road.jpg");
+   width: auto;
+   height: 125px;
+}
+    
+.homeContainer {
+      background-color:#3e4b3b;
+      margin: 3px;
+}
+    
+.usersSectionHeading {
+    width: auto;
+    height: 165px;
+    display: block;
+    position: relative;
+}
+
+.usersSectionHeading::after {
+  content: "";
+  background: url("../Images/beachBus.jpg");
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.tripsSectionHeading {
+  width: auto;
+  height: 165px;
+  display: block;
+  position: relative;
+}
+
+.tripsSectionHeading::after {
+  content: "";
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC_9paO9khGS4GbgmUrhSwwTm7-Cwxwx5kWQqnWLwtBZecjK7o");
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.userHeading, .userSubHeading {
+text-align: center;
+}
+
+.driverHead {
+  font-weight:bold;
+}
+ 
+.userTop {
+  width: auto;
+  height: 175px;
+  display: block;
+  position: relative;
+}
+
+.userTop::after {
+  content: "";
+  background: url("../Images/volkswagon.jpg");
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+}
+
+.tripTop {
+  width: auto;
+  height: 125px;
+  display: block;
+  position: relative;
+}
+
+.tripTop ::after {
+   content: "";
+  background: url("../Images/activities.jpg");
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;  
+}
+ .tripContainer {
+   background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ws1LXmkd-vulpae6T3nnl0rORQ-3cmZ2y3N3UIjYbajo2Vmc");
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+/*Driver switch*/
+.switchPad {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.onoffswitch {
+    position: relative; width: 123px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 44px; padding: 0; line-height: 44px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "YEP";
+    padding-left: 10px;
+    background-color: #4AC234; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "NO";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #D11313;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 23px; margin: 10.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 75px;
+    border: 2px solid #999999; border-radius: 26px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}

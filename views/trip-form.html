@@ -1,0 +1,85 @@
+<div class="container">
+  <h1>{{header}}</h1>
+  <div class="tripTop">
+    <h1 class="hero">What's Happening?</h1>
+  </div>
+  <div class="row">
+    <h3 class="sectionHeader">Event Information</h3>
+
+    <div class="form-group col-sm-6">
+      <label for="name">Event Name</label>
+      <input type="text" class="form-control" placeholder="Event Name" ng-model="trip.name">
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label for="date">Event Date</label>
+      <input type="date" class="form-control" ng-model="trip.date">
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label for="time"> Time</label>
+      <input type="text" class="form-control" placeholder="5-6:30 PM" ng-model="trip.time">
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label for="street">Event Address</label>
+      <input type="text" class="form-control" placeholder="123 Main St" ng-model="trip.street">
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label for="city">City</label>
+      <input type="text" class="form-control" placeholder="Los Angeles" ng-model="trip.city">
+    </div>
+
+    <div class="form-group col-sm-2">
+      <label for="state">State</label>
+      <input type="text" class="form-control" placeholder="CA" ng-model="trip.state">
+    </div>
+
+    <div class="form-group col-sm-2">
+      <label for="zip">Zip</label>
+      <input type="text" class="form-control" placeholder="12345" ng-model="trip.zip">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="driveSwitch">
+      <h3 class="driverHead">I'd Like to Drive!</h3>
+
+      <div class="form-group">
+        <select class="form-control" ng-model="driverId" ng-change="setDriver()">
+          <option ng-repeat="user in users" value="{{user.id}}">
+            {{ user.firstName}} {{ user.lastName }}
+          </option>
+        </select>
+
+        <h4>Drive TO event:</h4>
+
+        <div class="switchPad">
+          <div class="onoffswitch">
+            <input type="checkbox" ng-model="trip.dropoff" ng-click="isDropoff(trip.dropoff)" class="onoffswitch-checkbox" name="onoffswitch"
+              id="dropoff" />
+            <label class="onoffswitch-label" for="dropoff">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+          </div>
+
+          <h4>Pick up FROM event:</h4>
+
+          <div class="onoffswitch">
+            <input type="checkbox" ng-model="trip.pickup" ng-click="isPickup(trip.pickup)" class="onoffswitch-checkbox" name="onoffswitch"
+              id="pickup" />
+            <label class="onoffswitch-label" for="pickup">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+          </label>
+          </div>
+        </div>
+
+        <button ng-click="addTrip()" class="btn btn-primary btn-lg pull-right cbtn" ng-show="submitButton">Submit</button>
+        <button ng-click="saveTrip()" class="btn btn-success btn-lg pull-right cbtn" ng-show="!submitButton">Save</button>
+      </div>
+    </div>
+  </div>
+</div><!--end container-->

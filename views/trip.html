@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row tripSection">
+    <div class="tripContainer col-md-12">
+      <div class="tripHeader">
+        <h2 class="tripHeading">{{ trip.name }} </h2>
+      </div>
+      <h3 class="tripSubHeading">Date:</strong> {{ trip.date | date: 'EEE MMM d, y'}}</h3>
+      <div class="tripBody">
+        <h4><strong>Time:</strong> {{ trip.time }}</h4>
+        <h4><strong>Address:</strong> {{ trip.street }}</h4>
+        <h4><strong>City:</strong> {{ trip.city }}</h4>
+        <h4><strong>State:</strong> {{ trip.state }}</h4>
+        <h4><strong>Zip:</strong> {{ trip.zip }}</h4>
+        <h4><strong>Driving TO:</strong> {{ trip.dropoff }}</h4>
+        <h4><strong>Picking up FROM:</strong> {{ trip.pickup }}</h4>
+        <button class="btn btn-info btn-sm" ui-sref="editTrip({id: {{ trip.id}}})">Update</button><!--direct to trip id view-->
+        <button class="btn btn-danger btn-sm" ng-click="deleteTrip(trip)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
